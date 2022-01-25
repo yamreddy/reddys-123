@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage ('ist Job'){
+        steps {
+            echo "First Job"
+        }
+    }
+    stage ('2nd Job'){
+        steps {
+            echo "Second Job"
+        }
+    }
+    stage ('3rd Job'){
+        steps {
+            echo "Third  Job"
+        }
+    }
+  }
+}

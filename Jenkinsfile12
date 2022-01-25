@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage ('SCM CODE'){
+        steps {
+            git 'https://github.com/radseela/Git-Moven-Pronect.git'
+        }
+    }
+    stage ('Build'){
+        steps {
+            bat label: '', script: 'mvn package'
+        }
+    } 
+    stage ('install'){
+        steps {
+            bat label: '', script: 'mvn install'
+        }
+    }  
+
+  }
+
+}
